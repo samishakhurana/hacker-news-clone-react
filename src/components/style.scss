@@ -2,7 +2,7 @@
   box-sizing: border-box;
   &__title {
     background-color: #f68325;
-    padding: 0px 5px;
+    padding: 5px 10px;
     img {
       height: 30px;
       width: 30px;
@@ -16,12 +16,21 @@
       font-weight: 600;
       font-size: 20px;;
     }
+    .toggle-btn {
+      float: right;
+    }
   }
   &__filter {
     background-color: #eae4e4;
     padding: 5px;
     box-sizing: border-box;
     width: 100%;
+  }
+  .dark-mode-title {
+    background-color: black;
+  }
+  .dark-mode-filter {
+    background-color: #aba8a7;
   }
 }
 
@@ -59,5 +68,45 @@
     td {
       padding-bottom: 5px;
     }
+  }
+  .dark-mode-table {
+    color: white;
+    background-color: #3d4144;
+  }
+}
+
+.toggle-btn {
+  display: inline-block;
+  input[type="checkbox"] {
+    display: none;
+  }
+  span {
+    position: relative;
+    display: block;
+    height: 30px;
+    width: 60px;
+    background-color: #eae4e4;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .4s;
+  }
+  span:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    background-color: #f68325;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    transition: ease-in 0.5s;
+  }
+  input[type="checkbox"]:checked ~ span:before {
+    background-color: black;
+    transform: translateX(28px);
+  }
+  input[type="checkbox"]:checked {
+    background-color: #908c8c;
   }
 }

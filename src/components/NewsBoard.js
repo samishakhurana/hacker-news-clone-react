@@ -1,10 +1,14 @@
 import React from 'react';
 
 class NewsBoard extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
   render () {
     return (
       <div className="news-board">
-        <table>
+        <table className={`${this.props.mode}-mode-table`}>
           <tbody>
             <tr className="news-board__title">
               <td>1. </td>
