@@ -4,17 +4,15 @@ import NewsBoard from 'components/NewsBoard'
 import 'App.css'
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(context, props) {
+    super(context, props);
     this.state = {
       mode: 'light'
     }
   }
 
   changeMode (mode) {
-    this.setState({mode: mode}, () => {
-      console.log(this.state.mode)
-    })
+    this.setState({mode: mode})
   }
 
   render () {

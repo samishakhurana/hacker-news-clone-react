@@ -100,7 +100,7 @@
     width: 26px;
     height: 26px;
     border-radius: 50%;
-    transition: ease-in 0.5s;
+    transition: ease-in 0.2s;
   }
   input[type="checkbox"]:checked ~ span:before {
     background-color: black;
